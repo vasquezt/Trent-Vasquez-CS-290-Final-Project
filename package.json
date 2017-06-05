@@ -1,0 +1,25 @@
+{
+  "name": "trentvasquez290finalproject",
+  "version": "1.0.0",
+  "description": "This is a website designed to show proficency in topics covered in CS 290",
+  "main": "server.js",
+  "dependencies": {
+  "express": "^4.15.3",
+  "express-handlebars": "^3.0.0",
+  "handlebars": "^4.0.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasquezt/Trent-Vasquez-CS-290-Final-Project.git"
+  },
+  "author": "Trent Vasquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vasquezt/Trent-Vasquez-CS-290-Final-Project/issues"
+  },
+  "homepage": "https://github.com/vasquezt/Trent-Vasquez-CS-290-Final-Project#readme"
+}
