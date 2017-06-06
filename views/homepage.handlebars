@@ -1,3 +1,15 @@
 {{! This is the base for the homepage }}
 
 {{> header}}
+
+{{> navbar}}
+
+<main class="article-container">
+	{{#each articleDataNorm}}
+		{{> article}}
+	{{/each}}
+
+	{{#each articleDataCur}}
+		{{> article}}
+	{{/each}}
+</main>
