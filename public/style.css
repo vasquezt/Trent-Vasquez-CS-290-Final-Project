@@ -1,8 +1,25 @@
 .navbar {
-	background-color: #ff9999;
+	display: -webkit-flex;
+	background-color: rgba(145, 48, 49, 0.8);
 	width: 100vw;
 	height: 15vh;
-	padding: 0px;
-	border: 0px;
+	margin: -8px;	
+	min-height: 140px;
+}
 
+.logo {
+	min-height: 130px;
+	max-width: 100px;
+	margin: 5px;
+	height: 13vh;
+	width: 6wh;
+}
+
+.title{
+	color: white;
+	padding-left: 30px;
+	text-shadow: 1px 0 black, 1px 0 black, 1px 0 black;
+	font-size 2em;
+	white-space: nowrap;
+	overflow: hidden;
 }
