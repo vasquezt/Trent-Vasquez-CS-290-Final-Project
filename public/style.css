@@ -68,7 +68,10 @@ a, a:visited, a:active, a:link{
 
 .article-img{
 	flex-basis: 40%;
-	max-width: auto;
-	max-height: 200px;
+	max-width: 40vw;
+	max-height: 30vw;
+	height: auto;
+	width: auto;
+	flex-basis: initial;
 
 }
