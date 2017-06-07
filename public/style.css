@@ -42,18 +42,24 @@ a, a:visited, a:active, a:link{
 }
 
 .navlink{
-	text-decoration: none;
+	padding-top: 4px;
+	padding-left: 10px;
+	text-decoration-color: #3c7f62;
 	color: rgb(227, 176, 83);
 	cursor: inherit;
+}
 
+.navlink:hover{
+	color: white;
 }
 
 .full-article{
 	display: -webkit-flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .text-box{
+	padding: 10px;
 	flex-basis: 45%;
 
 }
@@ -67,11 +73,16 @@ a, a:visited, a:active, a:link{
 }
 
 .article-img{
+	padding: 10px;
 	flex-basis: 40%;
 	max-width: 40vw;
 	max-height: 30vw;
 	height: auto;
 	width: auto;
 	flex-basis: initial;
+}
 
+.endcard-text{
+	font-size: 12px;
+	text-align: center;
 }
