@@ -10,8 +10,9 @@ var exphbs = require('express-handlebars');
 
 var secureArticleData = require('./secureArticleData');
 var articleData = require('./articleData');
+var fileName = './articleData.json';
 
-var port = process.env.PORT || 9001;
+var port = process.env.PORT || 1869;
 console.log('Server is running on port: ' + port);
 
 var app = express();
@@ -86,6 +87,12 @@ app.get('/:index', function(req, res, next){
 	if(pageFound == 0){
 		res.render('404Page');
 	}
+});
+
+fs.writeFile(fileName, JSON.stringify(articleData, null, 2), function(err){
+	if(err)return console.log(err);
+	console.log(JSON.stringify(articleData, null, 2));
+	console.log('writing to ' + fileName);
 });
 
 app.get('*', function(req, res){

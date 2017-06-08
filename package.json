@@ -4,9 +4,10 @@
   "description": "This is a website designed to show proficency in topics covered in CS 290",
   "main": "server.js",
   "dependencies": {
-  "express": "^4.15.3",
-  "express-handlebars": "^3.0.0",
-  "handlebars": "^4.0.10"
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.10",
+    "jsonfile": "^3.0.0"
   },
   "devDependencies": {},
   "scripts": {
