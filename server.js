@@ -108,18 +108,19 @@ app.post('/newArticle', function(req, res, next){
 			image: req.body.image
 		};
 
+		console.log(file);
+
 		file = file || [];
 
 		file.push(article);
 
-		fs.writeFile('articleData.json', JSON.stringify(article), function(err){
+		fs.writeFile('articleData.json', JSON.stringify(file), function(err){
 			if(err){
 				res.status(500).send("Unable to save article");
 			}else{
 				res.status(200).send();
 			}
 		});
-
 	}
 });
 
