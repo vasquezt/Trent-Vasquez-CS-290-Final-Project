@@ -33,6 +33,7 @@ a, a:visited, a:active, a:link{
 }
 
 .title{
+	font-family: Georgia;
 	color: white;
 	padding-left: 30px;
 	text-shadow: 1px 0 black, 1px 0 black, 1px 0 black;
@@ -42,6 +43,7 @@ a, a:visited, a:active, a:link{
 }
 
 .navlink{
+	font-family: Arial;
 	padding-top: 4px;
 	padding-left: 10px;
 	text-decoration-color: #3c7f62;
@@ -65,11 +67,12 @@ a, a:visited, a:active, a:link{
 }
 
 .article-title{
-
+	font-weight: bold;
+	font-family: Verdana;
 }
 
 .article-text{
-	
+	font-family: Arial;
 }
 
 .article-img{
@@ -85,4 +88,32 @@ a, a:visited, a:active, a:link{
 .endcard-text{
 	font-size: 12px;
 	text-align: center;
+}
+
+#article-title-name,
+#article-text-content,
+#article-img-content{
+	display: flex;
+	margin: 10px;
+}
+
+#submit-article{
+	color: #e3ab5c;
+	background-color: #3c7f62;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 20px;
+	border-radius: 16px;
+	border: 2px solid black;
+}
+
+#submit-article:hover{
+	color: white;
+	cursor: pointer;
+}
+
+.new-article-lable{
+	margin: 10px;
+	font-weight: 500;
+	font-family: Arial;
 }

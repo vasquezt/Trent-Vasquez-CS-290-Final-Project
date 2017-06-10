@@ -4,6 +4,7 @@ var http= require('http');
 var path = require('path');
 var url = require('url');
 
+var bodyParser = require('body-parser');
 var express = require('express');
 var handlebars = require('handlebars');
 var exphbs = require('express-handlebars');
@@ -20,6 +21,8 @@ app.use(express.static('public'));
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', '.handlebars');
+
+app.use(bodyParser.json());
 
 app.get('/', function(req, res, next){
 	if(secureArticleData){
@@ -89,11 +92,38 @@ app.get('/:index', function(req, res, next){
 	}
 });
 
-fs.writeFile(fileName, JSON.stringify(articleData, null, 2), function(err){
+/*fs.writeFile(fileName, JSON.stringify(articleData, null, 2), function(err){
 	if(err)return console.log(err);
 	console.log(JSON.stringify(articleData, null, 2));
 	console.log('writing to ' + fileName);
 });
+*/
+
+app.post('/newArticle', function(req, res, next){
+	var file = articleData;
+	if(file){
+		var article = {
+			title: req.body.title,
+			text: req.body.text,
+			image: req.body.image
+		};
+
+		file = file || [];
+
+		file.push(article);
+
+		fs.writeFile('articleData.json', JSON.stringify(article), function(err){
+			if(err){
+				res.status(500).send("Unable to save article");
+			}else{
+				res.status(200).send();
+			}
+		});
+
+	}
+});
+
+
 
 app.get('*', function(req, res){
 	res.status(404);
